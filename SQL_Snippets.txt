@@ -1,0 +1,37 @@
+1> SELECT * FROM [TABLE NAME]
+
+2> DROP TABLE [TABLE NAME] > Deletes Entire Table.
+
+3> TRUNCATE TABLE [TABLE NAME] > removes table content with column names intact.
+
+4> CREATE TABLE [TableName] (Name VARCHAR(100), ..etc)
+
+5> INSERT INTO [TableName] (Name, Age,..) VALUES (Aamir, 30,..), (Farha, 30,..)
+
+6> [RowNumber] int identity(1,1) > Creates a row with ID numbers
+
+7> USE [DBNAME] GO > This will work inside the Database
+
+8> SELECT * FROM [OrderBreakdown] WHERE [category] = 'Furniture'
+
+9> WHERE ([category] = 'Furniture' AND CONVERT(FLOAT, [SALES]) > 100) OR [Category] = 'Technology'
+
+10> WHERE [Customer Name] LIKE '_e%' > RegEx Use Cases '%e%', 'e%', '%e' .. etc
+
+11> Comments : Multiline > /* Comment */ SingleLine > -- Comment
+
+12> ORDER BY [SALES] DESC/ASC
+
+13> Data Conversion > Implicit and Explicit (Cast, Convert)
+
+14> Cast > ORDER BY CAST([SALES] as FLOAT)
+        Convert > ORDER BY CONVERT(FLOAT, [SALES])
+
+15> UPDATE [TableName] SET [ColumnName] = Null, Number etc
+        WHERE [ColumnName2] = something
+
+16> Selecting NULL values >> WHERE [DISCOUNT] is/is not NULL 
+
+17> SELECT * FROM [ListOfOrders] AS A
+        LEFT JOIN [OrderBreakdown] AS B
+        ON A.[Order ID] = B.[Order ID]
